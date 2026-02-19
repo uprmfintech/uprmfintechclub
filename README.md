@@ -91,4 +91,89 @@ of financial technology and innovation.
 [1] Rishi, “The 15+ US Student Organizations Leading FinTech Movements at their Universities,”
 Medium, Jan. 05, 2018. https://medium.com/michiganfintech/the-15-us-student-organizations-
 leading-fintech-movements-at-their-universities-fa2543cdcbd8 (accessed Jan. 5, 2026).‌
-4
+
+
+
+
+
+
+
+
+
+# Org Structure
+
+Executive (Directive) Structure
+
+## President
+
+Focus: Vision & external representation
+	•	Defines mission, long-term strategy, and priorities
+	•	Represents the club to faculty, sponsors, and industry
+	•	Ensures all verticals (Growth, Product, Ops) align with vision
+
+Think: CEO
+
+⸻
+
+## Vice President
+
+Focus: Internal alignment & execution
+	•	Translates vision into executable initiatives
+	•	Coordinates between Growth, Product, and Ops
+	•	Steps in for President when needed
+
+Think: Chief of Staff / COO hybrid
+
+⸻
+
+## Head of Growth
+
+Focus: Members, brand, and partnerships
+	•	Member acquisition and retention
+	•	Sponsorships, industry relations, and outreach
+	•	Marketing, social media, and community building
+
+Think: Growth / BizDev / Marketing
+
+⸻
+
+## Head of Product
+
+Focus: What the club builds and delivers
+	•	Oversees projects, workshops, hackathons, and research initiatives
+	•	Defines learning tracks (Quant, SWE, Data, AI, FinTech)
+	•	Ensures technical and educational quality
+
+Think: Product Manager
+
+⸻
+
+## Head of Operations
+
+Focus: Systems, logistics, and execution
+	•	Budgeting, reimbursements, and internal processes
+	•	Event logistics and scheduling
+	•	Documentation, tooling, and compliance
+
+Think: Operations / Finance
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
