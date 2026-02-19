@@ -6,7 +6,7 @@ February 19, 2026
 This proposal outlines the concept and structure of the FinTech Club at the University of
 Puerto Rico: Mayag¨uez. The document is structured into distinct sections: the Introduction,
 Mission, Vision, Core Focus, Foundation Story, Road Map, and Long-term Impact.
-##1 Introduction
+## 1 Introduction
 ”We can only see a short distance ahead, but we can see plenty there that needs to be done.” — Alan
 Turing. As the father of modern computing saw the need to look forward, the FinTech Club at the
 University of Puerto Rico looks to bridge the gaps in the short distance we can see ahead. Our purpose
