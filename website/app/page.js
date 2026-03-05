@@ -23,7 +23,7 @@ const Navbar = () => {
         <div className="flex items-center">
           <div className="relative flex items-center">
             <Image 
-              src="/file.png" 
+              src="/transp_logo.png" 
               alt="UPRM FinTech Logo" 
               width={124} 
               height={60} 
