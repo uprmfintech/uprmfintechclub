@@ -128,11 +128,16 @@ const Hero = () => {
           A student-led organization dedicated to bridging the gap between finance and technology through quantitative research, software engineering, and industry collaboration.
         </p>
         <div className="hero-text">
-          <button className="group relative inline-flex items-center gap-3 bg-brand-aqua text-brand-dark px-8 py-4 rounded-sm font-medium text-lg overflow-hidden transition-transform hover:scale-[1.02]">
+          <a
+            href={CONTACT_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative inline-flex items-center gap-3 bg-brand-aqua text-brand-dark px-8 py-4 rounded-sm font-medium text-lg overflow-hidden transition-transform hover:scale-[1.02]"
+          >
             <span className="relative z-10">Join the Network</span>
             <ArrowRight className="relative z-10 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
-          </button>
+          </a>
         </div>
       </div>
     </section>
