@@ -7,6 +7,7 @@ import { ArrowRight, Terminal, Activity, Network, Calendar, BookOpen, Code2, Use
 import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
+const CONTACT_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeoHZxF_ptuzaZr-T0AlGuwkUQLRSWUgt5oycRjNIK8lZvi8g/viewform";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -43,9 +44,14 @@ const Navbar = () => {
           <a href="#team" className="hover:text-brand-aqua transition-colors">Team</a>
           <a href="#partners" className="hover:text-brand-aqua transition-colors">Partners</a>
         </div>
-        <button className="bg-brand-green text-brand-white px-5 py-2.5 text-sm font-medium rounded-sm hover:bg-brand-green/90 transition-colors">
+        <a
+          href={CONTACT_FORM_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-brand-green text-brand-white px-5 py-2.5 text-sm font-medium rounded-sm hover:bg-brand-green/90 transition-colors"
+        >
           Contact Us
-        </button>
+        </a>
       </div>
     </nav>
   );
@@ -510,7 +516,12 @@ const CTA = () => {
         <h2 className="font-serif text-5xl md:text-7xl font-bold mb-12">
           Ready to build the future of finance?
         </h2>
-        <a href="mailto:contact@uprmfintech.org" className="group relative inline-flex items-center justify-center bg-brand-white text-brand-dark px-12 py-6 rounded-sm font-bold text-xl overflow-hidden transition-transform hover:scale-[1.02] duration-50">
+        <a
+          href={CONTACT_FORM_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group relative inline-flex items-center justify-center bg-brand-white text-brand-dark px-12 py-6 rounded-sm font-bold text-xl overflow-hidden transition-transform hover:scale-[1.02] duration-50"
+        >
           <span className="absolute inset-0 w-full h-full bg-brand-green transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 ease-out" />
           <span className="relative z-10 group-hover:text-brand-white transition-colors duration-300">Join the Network</span>
         </a>
@@ -544,7 +555,7 @@ const Footer = () => {
             <ul className="space-y-3 font-sans text-sm">
               <li><a href="#" className="hover:text-brand-green transition-colors">LinkedIn</a></li>
               <li><a href="#" className="hover:text-brand-green transition-colors">GitHub</a></li>
-              <li><a href="mailto:contact@uprmfintech.org" className="hover:text-brand-green transition-colors">Contact</a></li>
+              <li><a href={CONTACT_FORM_URL} target="_blank" rel="noopener noreferrer" className="hover:text-brand-green transition-colors">Contact</a></li>
             </ul>
           </div>
         </div>
