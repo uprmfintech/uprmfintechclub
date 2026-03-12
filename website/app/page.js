@@ -80,6 +80,28 @@ const Hero = () => {
           priority
         />
       </div>
+
+      {/* Equation Overlay */}
+      <div className="absolute left-4 bottom-20 md:left-8 md:bottom-24 lg:left-12 z-[1] pointer-events-none w-40 md:w-56 lg:w-64">
+        <Image
+          src="/math-overlay.png"
+          alt="Math equations overlay"
+          width={480}
+          height={399}
+          className="w-full h-auto invert opacity-60 mix-blend-normal"
+          priority
+        />
+      </div>
+      <div className="absolute right-4 bottom-20 md:right-8 md:bottom-24 lg:right-12 z-[1] pointer-events-none w-32 md:w-44 lg:w-52">
+        <Image
+          src="/math-overlay2.png"
+          alt="Additional math equations overlay"
+          width={480}
+          height={399}
+          className="w-full h-auto invert opacity-60 mix-blend-normal"
+          priority
+        />
+      </div>
       
       {/* Abstract background grid/surface */}
       <div className="absolute inset-0 opacity-20 z-0" style={{
