@@ -46,9 +46,7 @@ const Navbar = () => {
         </div>
         <a
           href={CONTACT_FORM_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-brand-green text-brand-white px-5 py-2.5 text-sm font-medium rounded-sm hover:bg-brand-green/90 transition-colors"
+          className="relative z-10 bg-brand-green text-brand-white px-5 py-2.5 text-sm font-medium rounded-sm hover:bg-brand-green/90 transition-colors"
         >
           Contact Us
         </a>
@@ -130,8 +128,6 @@ const Hero = () => {
         <div className="hero-text">
           <a
             href={CONTACT_FORM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
             className="group relative inline-flex items-center gap-3 bg-brand-aqua text-brand-dark px-8 py-4 rounded-sm font-medium text-lg overflow-hidden transition-transform hover:scale-[1.02]"
           >
             <span className="relative z-10">Join the Network</span>
@@ -523,8 +519,6 @@ const CTA = () => {
         </h2>
         <a
           href={CONTACT_FORM_URL}
-          target="_blank"
-          rel="noopener noreferrer"
           className="group relative inline-flex items-center justify-center bg-brand-white text-brand-dark px-12 py-6 rounded-sm font-bold text-xl overflow-hidden transition-transform hover:scale-[1.02] duration-50"
         >
           <span className="absolute inset-0 w-full h-full bg-brand-green transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 ease-out" />
@@ -560,7 +554,7 @@ const Footer = () => {
             <ul className="space-y-3 font-sans text-sm">
               <li><a href="#" className="hover:text-brand-green transition-colors">LinkedIn</a></li>
               <li><a href="#" className="hover:text-brand-green transition-colors">GitHub</a></li>
-              <li><a href={CONTACT_FORM_URL} target="_blank" rel="noopener noreferrer" className="hover:text-brand-green transition-colors">Contact</a></li>
+              <li><a href={CONTACT_FORM_URL} className="hover:text-brand-green transition-colors">Contact</a></li>
             </ul>
           </div>
         </div>
