@@ -8,6 +8,7 @@ import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 const CONTACT_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeoHZxF_ptuzaZr-T0AlGuwkUQLRSWUgt5oycRjNIK8lZvi8g/viewform";
+const upcomingEvents = [];
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -415,26 +416,59 @@ const ResourcesEvents = () => {
           {/* Events Pane */}
           <div id="events" className="bg-brand-dark text-brand-white rounded-md p-8 md:p-10 shadow-lg">
             <h2 className="font-mono text-sm tracking-widest uppercase text-brand-white/50 mb-4">03 // Upcoming Events</h2>
-            <h3 className="font-serif text-3xl font-bold mb-8">The Calendar</h3>
+            <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <h3 className="font-serif text-3xl font-bold mb-3">Events Calendar</h3>
+                <p className="font-sans text-sm leading-relaxed text-brand-white/65">
+                  Confirmed workshops, project nights, and partner sessions will be posted here as they are announced.
+                </p>
+              </div>
+              <span className="font-mono text-xs uppercase tracking-widest text-brand-aqua">Fall 2026</span>
+            </div>
             
             <div className="space-y-6">
-              {[
-                { date: "2026-03-15", title: "Create Puerto Rico STX Dataset", type: "Workshop" },
-                { date: "2026-03-28", title: "DeFi Architecture Deep Dive", type: "Seminar" },
-                { date: "2026-04-10", title: "Spring FinTech Hackathon", type: "Hackathon" },
-                { date: "2026-04-22", title: "Industry Panel: Future of Finance", type: "Jerome Powell" },
-              ].map((event, i) => (
-                <div key={i} className="resource-item group flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-brand-white/10 hover:border-brand-aqua transition-colors">
-                  <div className="flex items-center gap-4 mb-2 sm:mb-0">
-                    <Calendar className="w-4 h-4 text-brand-aqua" />
-                    <span className="font-mono text-sm text-brand-white/70">{event.date}</span>
+              {upcomingEvents.length > 0 ? (
+                upcomingEvents.map((event) => (
+                  <div key={`${event.date}-${event.title}`} className="resource-item group flex flex-col justify-between gap-3 border-b border-brand-white/10 py-4 transition-colors hover:border-brand-aqua sm:flex-row sm:items-center">
+                    <div className="flex items-start gap-4">
+                      <Calendar className="mt-0.5 h-4 w-4 shrink-0 text-brand-aqua" />
+                      <div className="flex flex-col gap-1">
+                        <span className="font-mono text-sm text-brand-white/70">{event.date}</span>
+                        {event.time ? (
+                          <span className="font-mono text-xs uppercase tracking-widest text-brand-white/45">{event.time}</span>
+                        ) : null}
+                      </div>
+                    </div>
+                    <div className="flex min-w-0 flex-col sm:items-end sm:text-right">
+                      <span className="break-words font-sans text-lg font-bold transition-colors group-hover:text-brand-aqua">{event.title}</span>
+                      <span className="font-mono text-xs uppercase tracking-widest text-brand-green">{event.type}</span>
+                      {event.location ? (
+                        <span className="mt-1 font-sans text-xs text-brand-white/50">{event.location}</span>
+                      ) : null}
+                    </div>
                   </div>
-                  <div className="flex flex-col sm:items-end">
-                    <span className="font-sans font-bold text-lg group-hover:text-brand-aqua transition-colors">{event.title}</span>
-                    <span className="font-mono text-xs text-brand-green uppercase tracking-widest">{event.type}</span>
+                ))
+              ) : (
+                <div className="resource-item border-y border-brand-white/10 py-8">
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-sm bg-brand-white/5">
+                      <Calendar className="h-5 w-5 text-brand-aqua" />
+                    </div>
+                    <div>
+                      <h4 className="font-sans text-xl font-bold">Calendar updates coming soon</h4>
+                      <p className="mt-3 max-w-md font-sans text-sm leading-relaxed text-brand-white/65">
+                        UPRM FinTech is finalizing the next slate of events. Join the network to get updates as dates are confirmed.
+                      </p>
+                      <a
+                        href={CONTACT_FORM_URL}
+                        className="mt-6 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-brand-aqua transition-colors hover:text-brand-white"
+                      >
+                        Get Updates <ArrowRight className="h-3.5 w-3.5" />
+                      </a>
+                    </div>
                   </div>
                 </div>
-              ))}
+              )}
             </div>
           </div>
           
